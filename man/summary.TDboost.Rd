@@ -40,7 +40,7 @@ unnormalized influence. }
 \item{...}{ other arguments passed to the plot function. }
 }
 \details{
-This returns the reduction attributeable to each varaible in sum of squared error in 
+This returns the reduction attributable to each variable in sum of squared error in 
 predicting the gradient on each iteration. It describes the relative influence 
 of each variable in reducing the loss function. See the references below for 
 exact details on the computation.
@@ -50,7 +50,7 @@ Returns a data frame where the first component is the variable name and the
 second is the computed relative influence, normalized to sum to 100.
 }
 \references{
-Yang, Y., Qian, W. and Zou, H. (2013), \dQuote{A Boosted Nonparametric Tweedie Model for Insurance Premium.} Preprint.
+Yang, Y., Qian, W. and Zou, H. (2013), \dQuote{A Boosted Tweedie Compound Poisson Model for Insurance Premium} Preprint.
 
 
 
@@ -59,11 +59,8 @@ Statistics} 31:172-181.
 
 \url{http://cran.r-project.org/web/packages/gbm/}\cr
 
-
 J.H. Friedman (2001). "Greedy Function Approximation: A Gradient Boosting
 Machine," Annals of Statistics 29(5):1189-1232.
-
-L. Breiman (2001). "Random Forests," Available at \url{ftp://ftp.stat.berkeley.edu/pub/users/breiman/randomforest2001.pdf}.
 
 }
 \author{Yi Yang \email{yiyang@umn.edu}, Wei Qian \email{weiqian@stat.umn.edu} and Hui Zou \email{hzou@stat.umn.edu}}

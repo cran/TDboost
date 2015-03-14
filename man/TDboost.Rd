@@ -51,7 +51,9 @@ TDboost.more(object,
    resupply the offset to \code{\link{TDboost.more}}.}
 \item{distribution}{a list with a component \code{name} specifying the distribution 
    and any additional parameters needed. Tweedie regression is available and \code{distribution} must a list of the form 
-   \code{list(name="EDM",alpha=0.25)} where \code{alpha} is the index parameter that must be in (1,2). The current version's Tweedie regression methods do 
+   \code{list(name="EDM",alpha=1.5)} where \code{alpha} is the index parameter that must be in (1,2]. 
+When \code{alpha=2}, the distribution reduces to gamma.
+  The current version's Tweedie regression methods do 
    not handle non-constant weights and will stop.}
 \item{data}{an optional data frame containing the variables in the model. By
    default the variables are taken from \code{environment(formula)}, typically 
@@ -140,7 +142,7 @@ For general practice \code{TDboost} is preferable.
 \code{\link{TDboost.object}}.
 }
 \references{
-Yang, Y., Qian, W. and Zou, H. (2013), \dQuote{A Boosted Nonparametric Tweedie Model for Insurance Premium.} Preprint.
+Yang, Y., Qian, W. and Zou, H. (2013), \dQuote{A Boosted Tweedie Compound Poisson Model for Insurance Premium} Preprint.
 
 
 G. Ridgeway (1999). \dQuote{The state of boosting,} \emph{Computing Science and
@@ -216,6 +218,17 @@ plot.TDboost(TDboost1,c(1,3),best.iter)
 # do another 20 iterations
 TDboost2 <- TDboost.more(TDboost1,20,
                  verbose=FALSE) # stop printing detailed progress
+
+# fit a gamma model (when alpha = 2.0)
+data2 <- data1[data1$Y!=0,]
+TDboost3 <- TDboost(Y~X1+X2+X3+X4+X5+X6,         # formula
+    data=data2,                   # dataset
+    distribution=list(name="EDM",alpha=2.0),
+    n.trees=3000, 				 # number of trees
+    train.fraction = 0.5,        # fraction of data for training,
+    verbose=TRUE)                # print out progress
+best.iter2 <- TDboost.perf(TDboost3,method="test")
+
 }
 \keyword{models}
 \keyword{nonlinear}
