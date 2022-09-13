@@ -5,6 +5,7 @@
 //------------------------------------------------------------------------------
 //  by Greg Ridgeway  Copyright (C) 2003
 #include "node_search.h"
+#include <climits>
 
 CNodeSearch::CNodeSearch()
     :k_cMaxClasses(1024)

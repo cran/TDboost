@@ -323,7 +323,7 @@ SEXP TDboost_pred
    SEXP riSingleTree // boolean whether to return only results for one tree
 )
 {
-   unsigned long hr = 0;
+//   unsigned long hr = 0;
    int iTree = 0;
    int iObs = 0;
    int cRows = INTEGER(rcRows)[0];
@@ -348,7 +348,7 @@ SEXP TDboost_pred
    PROTECT(radPredF = allocVector(REALSXP, cRows*cPredIterations));
    if(radPredF == NULL)
    {
-      hr = TDboost_OUTOFMEMORY;
+//      hr = TDboost_OUTOFMEMORY;
       goto Error;
    }
 
@@ -463,7 +463,7 @@ SEXP TDboost_plot
     SEXP raiVarType   // vector of variable types
 )
 {
-    unsigned long hr = 0;
+//    unsigned long hr = 0;
     int i = 0;
     int iTree = 0;
     int iObs = 0;
@@ -493,7 +493,7 @@ SEXP TDboost_plot
     PROTECT(radPredF = allocVector(REALSXP, cRows));
     if(radPredF == NULL)
     {
-        hr = TDboost_OUTOFMEMORY;
+//        hr = TDboost_OUTOFMEMORY;
         goto Error;
     }
     for(iObs=0; iObs<cRows; iObs++)
