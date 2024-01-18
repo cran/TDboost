@@ -1,6 +1,6 @@
 4fe869ee987a340198fb0d54c55c47f1 *COPYING
 555973ba86541ecdb3a3f827cf19f2f7 *ChangeLog
-817101245d812be975e577e8f371c59b *DESCRIPTION
+5b75284ab0a7c1da8a83a942e07f068d *DESCRIPTION
 dd48c8148d7320dc517e7ea8fb61f32f *NAMESPACE
 4fabf17ccf2b59db1452a4c7a1440ddc *R/TDboost.R
 cea049dd5b1990c025bc6eb9aeb16a33 *data/FHT.rda
@@ -27,9 +27,9 @@ c44b979daf5eed41d27854db82cea348 *src/dataset.cpp
 39094967ceaabf7c744bc93d0b86d22f *src/matrix.h
 85b928d5c41c40a586c0a0a7edd4056a *src/node.cpp
 d589465696d3f150c13f0c5d4134f29c *src/node.h
-4121ea06212c912cd2eb5c2134f3d724 *src/node_categorical.cpp
+8587d0ac7e32d525a7d94345938a52b2 *src/node_categorical.cpp
 038fb7cf0f6e864a560d157013759afa *src/node_categorical.h
-ac82a51376432cfe09fd83d9b96556fb *src/node_continuous.cpp
+d11b5357eb634656c705ab3bb9ab9bd5 *src/node_continuous.cpp
 9f766cd76f6f1dc5b93bcdc72e554a84 *src/node_continuous.h
 a822210b31c3e0465365c9add4b7e496 *src/node_factory.cpp
 8008ad9524005381dc6d245603e84802 *src/node_factory.h

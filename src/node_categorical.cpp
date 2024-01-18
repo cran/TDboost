@@ -43,20 +43,20 @@ TDboostRESULT CNodeCategorical::PrintSubtree
            (pMissingNode == NULL ? 0.0 : pMissingNode->dPrediction));
 
     for(i=0; i< cIndent; i++) Rprintf("  ");
-    Rprintf("V%d in ",iSplitVar);
+    Rprintf("V%ld in ",iSplitVar);
     for(i=0; i<cLeftCategory; i++)
     {
-        Rprintf("%d",aiLeftCategory[i]);
+        Rprintf("%ld",aiLeftCategory[i]);
         if(i<cLeftCategory-1) Rprintf(",");
     }
     Rprintf("\n");
     hr = pLeftNode->PrintSubtree(cIndent+1);
 
     for(i=0; i< cIndent; i++) Rprintf("  ");
-    Rprintf("V%d not in ",iSplitVar);
+    Rprintf("V%ld not in ",iSplitVar);
     for(i=0; i<cLeftCategory; i++)
     {
-        Rprintf("%d",aiLeftCategory[i]);
+        Rprintf("%ld",aiLeftCategory[i]);
         if(i<cLeftCategory-1) Rprintf(",");
     }
     Rprintf("\n");
